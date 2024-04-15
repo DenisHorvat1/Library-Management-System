@@ -10,6 +10,17 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
-    public DbSet<LibraryApp.Models.Book> Book { get; set; } = default!;
+    public DbSet<LibraryApp.Models.Book> Book { get; set; }
+    public DbSet<LibraryApp.Models.User> User { get; set; }
+    public DbSet<LibraryApp.Models.Transaction> Transaction { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        builder.Entity<Book>()
+            .Property(s => s.Name)
+            .IsRequired();
+
+        base.OnModelCreating(builder);
+    }
 }
 

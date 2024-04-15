@@ -1,12 +1,26 @@
 ﻿<Properties StartupConfiguration="{72CA494F-D362-4186-A45D-3B2FC6AE50CC}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="LibraryApp/Models/Book.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LibraryApp/Controllers/HomeController.cs">
     <Files>
-      <File FileName="LibraryApp/Controllers/HomeController.cs" />
-      <File FileName="LibraryApp/Models/Book.cs" Line="22" Column="1" />
-      <File FileName="LibraryApp/Controllers/BooksController.cs" Line="60" Column="32" />
+      <File FileName="LibraryApp/Controllers/HomeController.cs" Line="13" Column="26" />
+      <File FileName="LibraryApp/Models/Book.cs" />
+      <File FileName="LibraryApp/Controllers/BooksController.cs" />
       <File FileName="LibraryApp/Views/Books/ShowSearchForm.cshtml" />
       <File FileName="LibraryApp/Views/Shared/_Layout.cshtml" />
       <File FileName="LibraryApp/Views/Shared/_LoginPartial.cshtml" />
+      <File FileName="LibraryApp/Models/User.cs" />
+      <File FileName="LibraryApp/Models/ErrorViewModel.cs" />
+      <File FileName="LibraryApp/Repositories/IBookRepository.cs" />
+      <File FileName="LibraryApp/Repositories/ITransactionRepository.cs" />
+      <File FileName="LibraryApp/Repositories/BookRepository.cs" />
+      <File FileName="LibraryApp/Repositories/TransactionRepository.cs" />
+      <File FileName="LibraryApp/Repositories/IUserRepository.cs" />
+      <File FileName="LibraryApp/Repositories/UserRepository.cs" />
+      <File FileName="LibraryApp/Models/Transaction.cs" />
+      <File FileName="LibraryApp/Program.cs" Line="18" Column="63" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,8 +28,8 @@
           <Node name="LibraryApp" expanded="True">
             <Node name="LibraryApp" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Book.cs" selected="True" />
+              <Node name="Repositories" expanded="True">
+                <Node name="UserRepository.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -26,8 +40,4 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.LibraryApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
