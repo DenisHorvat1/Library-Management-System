@@ -18,7 +18,7 @@ namespace LibraryApp.Repositories
         }
     
 
-        public void DeleteUser(string userId)
+        public void DeleteUser(int userId)
         {
             var userToDelete = _users.FirstOrDefault(u => u.Id == userId);
             if (userToDelete != null)
@@ -27,9 +27,9 @@ namespace LibraryApp.Repositories
             }
         }
 
-        public User GetUserByName(string name)
+        public User GetUserById(int userId)
         {
-            throw new NotImplementedException();
+            return _users.FirstOrDefault(u => u.Id == userId);
         }
 
         public void UpdateUser(User user)
@@ -38,7 +38,6 @@ namespace LibraryApp.Repositories
             if (existingUser != null)
             {
                 existingUser.Name = user.Name;
-                existingUser.Email = user.Email;
                 // Update other properties as needed
             }
         }

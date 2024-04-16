@@ -3,6 +3,7 @@ using System;
 using LibraryApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LibraryApp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240416102050_InititalMig")]
+    partial class InititalMig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.18");
@@ -38,9 +41,6 @@ namespace LibraryApp.Data.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("NumberOfCopies")
-                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("TEXT");

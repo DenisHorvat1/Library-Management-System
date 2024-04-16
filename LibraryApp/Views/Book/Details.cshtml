@@ -23,22 +23,28 @@
             @Html.DisplayFor(model => model.ReleaseDate)
         </dd>
         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ISBN)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ISBN)
+        </dd>
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Genre)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Genre)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IsAvailable)
+            @Html.DisplayNameFor(model => model.NumberOfCopies)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IsAvailable)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Borrower)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Borrower)
+            @Html.DisplayFor(model => model.NumberOfCopies)
         </dd>
     </dl>
 </div>

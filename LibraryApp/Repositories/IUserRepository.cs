@@ -5,10 +5,10 @@ namespace LibraryApp.Repositories
 {
 	public interface IUserRepository
 	{
-        void AddUser(User author);
-        void UpdateUser(User author);
-        void DeleteUser(string name);
-        User GetUserByName(string name);
+        void AddUser(User user);
+        void UpdateUser(User user);
+        void DeleteUser(int userId);
+        User GetUserById(int userId);
     }
 }
 

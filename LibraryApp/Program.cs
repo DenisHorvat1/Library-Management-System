@@ -15,7 +15,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IBookRepository, BookRepository>();
 
 var app = builder.Build();
 

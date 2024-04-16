@@ -1,32 +1,72 @@
 ﻿using System;
+using LibraryApp.Data;
 using LibraryApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryApp.Repositories
 {
 	public class BookRepository : IBookRepository
 	{
-		public BookRepository()
+        private readonly ApplicationDbContext _context;
+
+        public BookRepository(ApplicationDbContext context)
 		{
-		}
-
-        public void AddBook(Book book)
-        {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public void DeleteBook(string isbn)
+
+        public async Task<IEnumerable<Book>> GetAllBooksAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Book
+                .OrderByDescending(b => b.NumberOfCopies)
+                .ToListAsync();
         }
 
-        public Book GetBookByISBN(string isbn)
+        public async Task<Book> GetBookByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Book.FirstOrDefaultAsync(b => b.Id == id);
         }
 
-        public void UpdateBook(Book book)
+
+        public async Task AddBookAsync(Book book)
         {
-            throw new NotImplementedException();
+            var existingBook = await _context.Book.FirstOrDefaultAsync(b => b.ISBN == book.ISBN);
+
+            if (existingBook != null)
+            {
+                // If book with the same ISBN already exists, increase NumberOfCopies
+                existingBook.NumberOfCopies++;
+                _context.Update(existingBook);
+            }
+            else
+            {
+                // If book with the same ISBN doesn't exist, add a new book
+                book.NumberOfCopies = 1; // Set NumberOfCopies to 1 for new book
+                _context.Add(book);
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateBookAsync(Book book)
+        {
+            _context.Update(book);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteBookAsync(int id)
+        {
+            var book = await GetBookByIdAsync(id);
+            if (book != null)
+            {
+                _context.Book.Remove(book);
+                await _context.SaveChangesAsync();
+            }
+        }
+
+        public async Task<bool> BookExistsAsync(int id)
+        {
+            return await _context.Book.AnyAsync(b => b.Id == id);
         }
     }
 }

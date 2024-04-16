@@ -12,6 +12,7 @@ namespace LibraryApp.Models
 		public string Author { get; set; }
 		public string ISBN { get; set; }
 		public string Genre { get; set; }
+		public int NumberOfCopies { get; set; }
 
 		public Book()
 		{
