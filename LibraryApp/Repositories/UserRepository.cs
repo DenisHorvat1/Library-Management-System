@@ -1,45 +1,48 @@
 ﻿using System;
+using LibraryApp.Data;
 using LibraryApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryApp.Repositories
 {
-	public class UserRepository : IUserRepository
-	{
+    public class UserRepository : IUserRepository
+    {
+        private readonly ApplicationDbContext _context;
 
-        private readonly List<User> _users = new List<User>();
-
-        public UserRepository()
-		{
-		}
-
-        public void AddUser(User user)
+        public UserRepository(ApplicationDbContext context)
         {
-            _users.Add(user);
-        }
-    
-
-        public void DeleteUser(int userId)
-        {
-            var userToDelete = _users.FirstOrDefault(u => u.Id == userId);
-            if (userToDelete != null)
-            {
-                _users.Remove(userToDelete);
-            }
+            _context = context;
         }
 
-        public User GetUserById(int userId)
+        public Task AddUserAsync(User user)
         {
-            return _users.FirstOrDefault(u => u.Id == userId);
+            throw new NotImplementedException();
         }
 
-        public void UpdateUser(User user)
+        public Task DeleteUserAsync(int id)
         {
-            var existingUser = _users.FirstOrDefault(u => u.Id == user.Id);
-            if (existingUser != null)
-            {
-                existingUser.Name = user.Name;
-                // Update other properties as needed
-            }
+            throw new NotImplementedException();
+        }
+
+        public async Task<IEnumerable<User>> GetAllUsersAsync()
+        {
+            return await _context.User
+                .ToListAsync();
+        }
+
+        public Task<User> GetUserByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateUserAsync(User user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UserExistsAsync(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
