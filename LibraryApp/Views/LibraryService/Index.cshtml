@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Rent and return Book";
+}
+
+<h2>Rent Book</h2>
+
+<form asp-action="RentBook">
+    <div class="form-group">
+        <label for="userId">User ID:</label>
+        <select type="number" class="form-control" id="userId" name="userId" asp-items="ViewBag.Users" required></select>
+    </div>
+    <div class="form-group">
+        <label for="bookId">Book ID:</label>
+        <input type="number" class="form-control" id="bookId" name="bookId" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Rent</button>
+</form>
+
+
+<h2>Return Book</h2>
+
+<form asp-action="ReturnBook">
+    <div class="form-group">
+        <label for="userId">User ID:</label>
+        <input type="number" class="form-control" id="userId" name="userId" required>
+    </div>
+    <div class="form-group">
+        <label for="bookId">Book ID:</label>
+        <input type="number" class="form-control" id="bookId" name="bookId" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Return</button>
+</form>
