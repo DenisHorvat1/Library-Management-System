@@ -68,6 +68,32 @@ namespace LibraryApp.Repositories
         {
             return await _context.Book.AnyAsync(b => b.Id == id);
         }
+
+        public async Task RentABookAsync(int id) //needs rework
+        {
+
+            var book = await _context.Book.FirstOrDefaultAsync(b => b.Id == id);
+
+            if (book == null)
+                throw new InvalidOperationException("The book is not available in this library");
+            if (book.NumberOfCopies == 0)
+                throw new InvalidOperationException("The book is not available momentanly");
+
+            book.NumberOfCopies--;
+            await UpdateBookAsync(book);
+
+        }
+
+        public async Task ReturnABookAsync(int id)
+        {
+            var book = await _context.Book.FirstOrDefaultAsync(b => b.Id == id);
+
+            if (book == null)
+                throw new InvalidOperationException("The book is not available in this library");
+
+            book.NumberOfCopies++;
+            await UpdateBookAsync(book);
+        }
     }
 }
 

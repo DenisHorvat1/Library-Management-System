@@ -14,14 +14,20 @@ namespace LibraryApp.Repositories
             _context = context;
         }
 
-        public Task AddUserAsync(User user)
+        public async Task AddUserAsync(User user)
         {
-            throw new NotImplementedException();
+            _context.Add(user);
+            await _context.SaveChangesAsync();
         }
 
-        public Task DeleteUserAsync(int id)
+        public async Task DeleteUserAsync(int id)
         {
-            throw new NotImplementedException();
+            var user = await GetUserByIdAsync(id);
+            if (user != null)
+            {
+                _context.User.Remove(user);
+                await _context.SaveChangesAsync();
+            }
         }
 
         public async Task<IEnumerable<User>> GetAllUsersAsync()
@@ -30,19 +36,20 @@ namespace LibraryApp.Repositories
                 .ToListAsync();
         }
 
-        public Task<User> GetUserByIdAsync(int id)
+        public async Task<User> GetUserByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.User.FirstOrDefaultAsync(b => b.Id == id);
         }
 
-        public Task UpdateUserAsync(User user)
+        public async Task UpdateUserAsync(User user)
         {
-            throw new NotImplementedException();
+            _context.Update(user);
+            await _context.SaveChangesAsync();
         }
 
-        public Task<bool> UserExistsAsync(int id)
+        public async Task<bool> UserExistsAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.User.AnyAsync(b => b.Id == id);
         }
     }
 }

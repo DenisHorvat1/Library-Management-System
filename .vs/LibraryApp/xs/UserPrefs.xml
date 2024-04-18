@@ -1,35 +1,49 @@
 ﻿<Properties StartupConfiguration="{72CA494F-D362-4186-A45D-3B2FC6AE50CC}|https">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LibraryApp/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LibraryApp/Service/LibraryService.cs">
     <Files>
-      <File FileName="LibraryApp/Controllers/HomeController.cs" Line="13" Column="26" />
-      <File FileName="LibraryApp/Models/Book.cs" />
-      <File FileName="LibraryApp/Controllers/BooksController.cs" />
-      <File FileName="LibraryApp/Views/Books/ShowSearchForm.cshtml" />
-      <File FileName="LibraryApp/Views/Shared/_Layout.cshtml" />
+      <File FileName="LibraryApp/Controllers/HomeController.cs" Line="17" Column="6" />
+      <File FileName="LibraryApp/Models/Book.cs" Line="16" Column="1" />
+      <File FileName="LibraryApp/Views/Shared/_Layout.cshtml" Line="32" Column="130" />
       <File FileName="LibraryApp/Views/Shared/_LoginPartial.cshtml" />
-      <File FileName="LibraryApp/Models/User.cs" />
-      <File FileName="LibraryApp/Models/ErrorViewModel.cs" />
-      <File FileName="LibraryApp/Repositories/IBookRepository.cs" />
-      <File FileName="LibraryApp/Repositories/ITransactionRepository.cs" />
-      <File FileName="LibraryApp/Repositories/BookRepository.cs" />
-      <File FileName="LibraryApp/Repositories/TransactionRepository.cs" />
-      <File FileName="LibraryApp/Repositories/IUserRepository.cs" />
-      <File FileName="LibraryApp/Repositories/UserRepository.cs" />
-      <File FileName="LibraryApp/Models/Transaction.cs" />
+      <File FileName="LibraryApp/Models/User.cs" Line="16" Column="1" />
+      <File FileName="LibraryApp/Models/ErrorViewModel.cs" Line="1" Column="1" />
+      <File FileName="LibraryApp/Repositories/IBookRepository.cs" Line="15" Column="1" />
+      <File FileName="LibraryApp/Repositories/ITransactionRepository.cs" Line="18" Column="2" />
+      <File FileName="LibraryApp/Repositories/BookRepository.cs" Line="18" Column="38" />
+      <File FileName="LibraryApp/Repositories/TransactionRepository.cs" Line="46" Column="32" />
+      <File FileName="LibraryApp/Repositories/IUserRepository.cs" Line="9" Column="45" />
+      <File FileName="LibraryApp/Repositories/UserRepository.cs" Line="10" Column="56" />
+      <File FileName="LibraryApp/Models/Transaction.cs" Line="18" Column="1" />
       <File FileName="LibraryApp/Program.cs" Line="18" Column="63" />
+      <File FileName="LibraryApp/Data/ApplicationDbContext.cs" Line="21" Column="27" />
+      <File FileName="LibraryApp/Views/Home/Index.cshtml" />
+      <File FileName="LibraryApp/Views/_ViewImports.cshtml" />
+      <File FileName="LibraryApp/Views/_ViewStart.cshtml" />
+      <File FileName="../../../../usr/local/share/dotnet/sdk/7.0.315/Microsoft.Common.CurrentVersion.targets" Line="4767" Column="1" />
+      <File FileName="LibraryApp/Controllers/BookController.cs" Line="67" Column="31" />
+      <File FileName="LibraryApp/Views/Book/Index.cshtml" Line="20" Column="18" />
+      <File FileName="LibraryApp/Views/Book/Create.cshtml" Line="40" Column="13" />
+      <File FileName="LibraryApp/Views/Book/Details.cshtml" Line="1" Column="1" />
+      <File FileName="LibraryApp/Views/Book/Edit.cshtml" Line="1" Column="1" />
+      <File FileName="LibraryApp/Controllers/UserController.cs" Line="82" Column="14" />
+      <File FileName="LibraryApp/Controllers/TransactionController.cs" Line="107" Column="50" />
+      <File FileName="LibraryApp/Views/User/Create.cshtml" Line="14" Column="30" />
+      <File FileName="LibraryApp/Views/Transaction/Create.cshtml" Line="18" Column="19" />
+      <File FileName="LibraryApp/Views/Transaction/Index.cshtml" Line="37" Column="58" />
+      <File FileName="LibraryApp/Views/Transaction/Edit.cshtml" Line="38" Column="19" />
+      <File FileName="LibraryApp/Service/LibraryService.cs" Line="44" Column="10" />
+      <File FileName="LibraryApp/Service/ILibraryService.cs" Line="16" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LibraryApp" expanded="True">
-            <Node name="LibraryApp" expanded="True">
+            <Node name="LibraryApp">
               <Node name="Controllers" expanded="True" />
-              <Node name="Repositories" expanded="True">
-                <Node name="UserRepository.cs" selected="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+              <Node name="Service" expanded="True">
+                <Node name="LibraryService.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -37,7 +51,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.LibraryApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

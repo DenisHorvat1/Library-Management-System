@@ -11,6 +11,9 @@ namespace LibraryApp.Repositories
         Task UpdateBookAsync(Book book);
         Task DeleteBookAsync(int id);
         Task<bool> BookExistsAsync(int id);
+
+        Task RentABookAsync(int id);
+        Task ReturnABookAsync(int id);
     }
 }
 

@@ -11,6 +11,7 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <None Remove="Repositories\" />
+    <None Remove="Service\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
@@ -28,5 +29,6 @@
 
   <ItemGroup>
     <Folder Include="Repositories\" />
+    <Folder Include="Service\" />
   </ItemGroup>
 </Project>
