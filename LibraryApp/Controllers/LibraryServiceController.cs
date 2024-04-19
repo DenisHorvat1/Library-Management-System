@@ -26,10 +26,25 @@ namespace LibraryApp.Controllers
         public async Task<IActionResult> Index()
         {
 
-            var books = await _libraryService.GetRentedBooksAsync();
-            var users = await _libraryService.GetUsersWithRentedBooksAsync();
-            ViewBag.Users = users.Select(u => new SelectListItem { Value = u.Id.ToString(), Text = u.Name });
-            ViewBag.Books = books.Select(b => new SelectListItem { Value = b.Id.ToString(), Text = b.Name });
+            var rentedBooks = await _libraryService.GetRentedBooksAsync();
+            var usersWithBooks = await _libraryService.GetUsersWithRentedBooksAsync();
+
+            var allBooks = await _libraryService.GetAvailableBooksAsync();
+            var allUsers = await _libraryService.GetAllUsersAsync();
+
+            var allBooksIdSelectList = new SelectList(allBooks, "Id", "Name");
+            var allUsersIdSelectList = new SelectList(allUsers, "Id", "Name");
+
+            var userIdSelectList = new SelectList(usersWithBooks, "Id", "Name");
+            var bookIdSelectList = new SelectList(rentedBooks, "Id", "Name");
+
+            // Set the SelectList as ViewBag data for returning
+            ViewBag.UsersReturn = userIdSelectList;
+            ViewBag.BooksReturn = bookIdSelectList;
+
+            //rent
+            ViewBag.UsersRent = allUsersIdSelectList;
+            ViewBag.BooksRent = allBooksIdSelectList;
             return View();
         }
 
@@ -38,7 +53,8 @@ namespace LibraryApp.Controllers
         public async Task<IActionResult> RentBook(int userId, int bookId)
         {
             await _libraryService.RentBookAsync(userId, bookId);
-            return View("Index");
+
+            return RedirectToAction(nameof(Index));
         }
 
 
@@ -46,7 +62,7 @@ namespace LibraryApp.Controllers
         public async Task<IActionResult> ReturnBook(int userId, int bookId)
         {
             await _libraryService.ReturnBookAsync(userId, bookId);
-            return View("Index");
+            return RedirectToAction(nameof(Index));
         }
     }
 }

@@ -11,6 +11,12 @@ namespace LibraryApp.Service
         Task<IEnumerable<Book>> GetRentedBooksAsync(); //now are rented
         Task<IEnumerable<User>> GetUsersWithRentedBooksAsync();
 
+        Task<IEnumerable<Book>> GetAvailableBooksAsync(); //now are rented
+        Task<IEnumerable<User>> GetUsersWithNoRentedBooksAsync();
+
+        Task<IEnumerable<Book>> GetAllBooksAsync();
+        Task<IEnumerable<User>> GetAllUsersAsync();
+
         Task<IEnumerable<Transaction>> GetUserHistory(int userId); //history of all their transaction
         Task<IEnumerable<Transaction>> GetBookHistory(int bookId);
 

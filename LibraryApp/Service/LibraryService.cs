@@ -121,6 +121,34 @@ namespace LibraryApp.Service
             transaction.DateReturned = DateTime.Now;
             await _transactionRepository.UpdateTransactionAsync(transaction);
         }
+
+        public async Task<IEnumerable<Book>> GetAvailableBooksAsync()
+        {
+            var books = (await _bookRepository.GetAllBooksAsync())
+                .Where(b => b.NumberOfCopies > 0);
+
+            return books;
+        }
+        public async Task<IEnumerable<User>> GetUsersWithNoRentedBooksAsync()
+        {
+            var allUsers = await _userRepository.GetAllUsersAsync();
+            var rentedBookUsers = (await _transactionRepository.GetAllTransactionsAsync())
+                                    .Where(t => t.DateReturned == null)
+                                    .Select(t => t.UserId)
+                                    .Distinct();
+
+            var usersWithNoRentedBooks = allUsers.Where(user => !rentedBookUsers.Contains(user.Id));
+            return usersWithNoRentedBooks;
+        }
+
+        public async Task<IEnumerable<Book>> GetAllBooksAsync()
+        {
+            return await _bookRepository.GetAllBooksAsync();
+        }
+        public async Task<IEnumerable<User>> GetAllUsersAsync()
+        {
+            return await _userRepository.GetAllUsersAsync();
+        }
     }
 }
 
