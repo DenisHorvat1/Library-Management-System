@@ -45,7 +45,28 @@ namespace LibraryApp.Controllers
             //rent
             ViewBag.UsersRent = allUsersIdSelectList;
             ViewBag.BooksRent = allBooksIdSelectList;
-            return View();
+
+            
+            return View(rentedBooks);
+        }
+
+
+        public async Task<IActionResult> Details()
+        {
+            var users = await _libraryService.GetUsersWithRentedBooksAsync();
+            var userBookPairs = new List<Tuple<User, IEnumerable<Book>>>();
+            var userTransactionPairs = new List<Tuple<User, IEnumerable<Transaction>>>();
+
+            foreach (var user in users)
+            {
+                var transactions = (await _libraryService.GetUserHistory(user.Id))
+                    .Where(t => t.DateReturned == null);
+                var rentedBooks = await _libraryService.GetRentedBooksForUserAsync(user.Id);
+                userBookPairs.Add(new Tuple<User, IEnumerable<Book>>(user, rentedBooks));
+                userTransactionPairs.Add(new Tuple<User, IEnumerable<Transaction>>(user, transactions));
+            }
+
+            return View(userTransactionPairs);
         }
 
 

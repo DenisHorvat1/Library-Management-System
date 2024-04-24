@@ -11,6 +11,9 @@ namespace LibraryApp.Service
         Task<IEnumerable<Book>> GetRentedBooksAsync(); //now are rented
         Task<IEnumerable<User>> GetUsersWithRentedBooksAsync();
 
+        Task<IEnumerable<Book>> GetRentedBooksForUserAsync(int userId);
+        Task<IEnumerable<User>> GetUsersForBookAsync(int bookId);
+
         Task<IEnumerable<Book>> GetAvailableBooksAsync(); //now are rented
         Task<IEnumerable<User>> GetUsersWithNoRentedBooksAsync();
 

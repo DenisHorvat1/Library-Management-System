@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Tuple<User, IEnumerable<Transaction>>>
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Users with Transaction History</h2>
+
+@foreach (var pair in Model)
+{
+    <h3>@pair.Item1.Name</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date Borrowed</th>
+                <th>Date Returned</th>
+                <th>Book Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var transaction in pair.Item2)
+            {
+                <tr>
+
+                    <td>@transaction.DateBorrowed.ToShortDateString()</td>
+                    <td>@(transaction.DateReturned.HasValue ? transaction.DateReturned.Value.ToShortDateString() : "-")</td>
+                    <td>@transaction.BookId</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

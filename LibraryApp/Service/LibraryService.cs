@@ -149,6 +149,15 @@ namespace LibraryApp.Service
         {
             return await _userRepository.GetAllUsersAsync();
         }
+
+        public async Task<IEnumerable<Book>> GetRentedBooksForUserAsync(int userId)
+        {
+            return await _transactionRepository.GetRentedBooksForUserAsync(userId);
+        }
+        public async Task<IEnumerable<User>> GetUsersForBookAsync(int bookId)
+        {
+            return await _transactionRepository.GetUsersForBookAsync(bookId);
+        }
     }
 }
 
