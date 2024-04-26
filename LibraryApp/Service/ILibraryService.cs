@@ -25,6 +25,8 @@ namespace LibraryApp.Service
 
         Task<IEnumerable<Transaction>> GetRentedBooksTransctionAsync(); //now are rented
         Task<IEnumerable<Transaction>> GetUsersWithRentedTransactionBooksAsync();
+
+        Task<IEnumerable<Book>> SearchBooks(string query);
     }
 }
 

@@ -69,6 +69,24 @@ namespace LibraryApp.Controllers
             return View(userTransactionPairs);
         }
 
+        public async Task<IActionResult> RentedBooks()
+        {
+            var rentedBooks = await _libraryService.GetRentedBooksAsync();
+
+            return View(rentedBooks);
+        }
+
+        public async Task<IActionResult> Search()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> SearchByName(string query)
+        {
+            var searchResults = await _libraryService.SearchBooks(query);
+            return View(searchResults);
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> RentBook(int userId, int bookId)
@@ -85,5 +103,7 @@ namespace LibraryApp.Controllers
             await _libraryService.ReturnBookAsync(userId, bookId);
             return RedirectToAction(nameof(Index));
         }
+
+
     }
 }

@@ -60,6 +60,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlicmFyeVNlcnZpY2UvTGlicmFyeVNlcnZpY2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/denishorvat/Projects/LibraryApp/LibraryApp/Views/LibraryService/RentedBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlicmFyeVNlcnZpY2UvUmVudGVkQm9va3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/denishorvat/Projects/LibraryApp/LibraryApp/Views/LibraryService/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlicmFyeVNlcnZpY2UvU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/denishorvat/Projects/LibraryApp/LibraryApp/Views/LibraryService/SearchByName.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlicmFyeVNlcnZpY2UvU2VhcmNoQnlOYW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/denishorvat/Projects/LibraryApp/LibraryApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

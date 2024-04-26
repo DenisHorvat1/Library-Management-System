@@ -6,57 +6,24 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.LibraryApp PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.LibraryApp.UnitTests FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LibraryApp/Controllers/LibraryServiceController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LibraryApp/Controllers/UserController.cs">
     <Files>
-      <File FileName="LibraryApp/Controllers/HomeController.cs" />
-      <File FileName="LibraryApp/Models/Book.cs" />
-      <File FileName="LibraryApp/Views/Shared/_Layout.cshtml" />
-      <File FileName="LibraryApp/Views/Shared/_LoginPartial.cshtml" />
-      <File FileName="LibraryApp/Models/User.cs" />
-      <File FileName="LibraryApp/Models/ErrorViewModel.cs" />
-      <File FileName="LibraryApp/Repositories/IBookRepository.cs" />
-      <File FileName="LibraryApp/Repositories/ITransactionRepository.cs" />
-      <File FileName="LibraryApp/Repositories/BookRepository.cs" />
-      <File FileName="LibraryApp/Repositories/TransactionRepository.cs" />
-      <File FileName="LibraryApp/Repositories/IUserRepository.cs" />
-      <File FileName="LibraryApp/Repositories/UserRepository.cs" />
-      <File FileName="LibraryApp/Models/Transaction.cs" />
-      <File FileName="LibraryApp/Views/Home/Index.cshtml" />
-      <File FileName="LibraryApp/Views/_ViewImports.cshtml" />
-      <File FileName="LibraryApp/Views/_ViewStart.cshtml" />
-      <File FileName="../../../../usr/local/share/dotnet/sdk/7.0.315/Microsoft.Common.CurrentVersion.targets" />
-      <File FileName="LibraryApp/Controllers/BookController.cs" />
-      <File FileName="LibraryApp/Views/Book/Index.cshtml" />
-      <File FileName="LibraryApp/Views/Book/Create.cshtml" />
-      <File FileName="LibraryApp/Views/Book/Details.cshtml" />
-      <File FileName="LibraryApp/Views/Book/Edit.cshtml" />
-      <File FileName="LibraryApp/Controllers/UserController.cs" />
-      <File FileName="LibraryApp/Controllers/TransactionController.cs" />
-      <File FileName="LibraryApp/Views/User/Create.cshtml" />
-      <File FileName="LibraryApp/Views/Transaction/Create.cshtml" />
-      <File FileName="LibraryApp/Views/Transaction/Index.cshtml" />
-      <File FileName="LibraryApp/Views/Transaction/Edit.cshtml" />
-      <File FileName="LibraryApp/Service/LibraryService.cs" />
-      <File FileName="LibraryApp/Service/ILibraryService.cs" />
-      <File FileName="LibraryApp/Views/Book/Delete.cshtml" />
-      <File FileName="LibraryApp/Controllers/LibraryServiceController.cs" Line="76" Column="25" />
-      <File FileName="LibraryApp/Views/Transaction/Details.cshtml" />
-      <File FileName="LibraryApp/Views/Transaction/Delete.cshtml" />
-      <File FileName="LibraryApp/Views/User/Index.cshtml" />
-      <File FileName="LibraryApp/Views/User/Details.cshtml" />
-      <File FileName="LibraryApp/Views/LibraryService/Details.cshtml" />
+      <File FileName="LibraryApp.UnitTests/UnitTest1.cs" Line="23" Column="1" />
+      <File FileName="LibraryApp/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="LibraryApp/Views/LibraryService/Details.cshtml" Line="9" Column="2" />
+      <File FileName="LibraryApp/Views/LibraryService/Index.cshtml" Line="40" Column="12" />
+      <File FileName="LibraryApp/Controllers/LibraryServiceController.cs" Line="73" Column="19" />
+      <File FileName="LibraryApp/Controllers/BookController.cs" Line="120" Column="30" />
+      <File FileName="LibraryApp/Controllers/UserController.cs" Line="31" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="LibraryApp" expanded="True">
-            <Node name="LibraryApp">
+          <Node name="LibraryApp">
+            <Node name="LibraryApp" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="LibraryServiceController.cs" selected="True" />
+                <Node name="UserController.cs" selected="True" />
               </Node>
-              <Node name="Models" expanded="True" />
-              <Node name="Service" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="LibraryService" expanded="True" />
               </Node>
@@ -64,7 +31,16 @@
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="LibraryApp">
+            <Node name="LibraryApp.UnitTests" selected="True" />
+          </Node>
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

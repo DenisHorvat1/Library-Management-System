@@ -1,0 +1,15 @@
+﻿@model string
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>Search Books</h1>
+
+<form asp-action="SearchByName" method="get">
+    <div class="form-group">
+        <label for="searchInput">Search by Name:</label>
+        <input type="text" class="form-control" id="searchInput" name="query" placeholder="Enter book name" value="@Model" />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>

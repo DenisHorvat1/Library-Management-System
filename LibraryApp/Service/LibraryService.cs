@@ -158,6 +158,15 @@ namespace LibraryApp.Service
         {
             return await _transactionRepository.GetUsersForBookAsync(bookId);
         }
+
+        public async Task<IEnumerable<Book>> SearchBooks(string query)
+        {
+            var searchResults = await _bookRepository.GetAllBooksAsync();
+            searchResults = searchResults.Where(book => book.Name.ToLower().Contains(query.ToLower()));
+            return searchResults;
+
+        }
+
     }
 }
 
